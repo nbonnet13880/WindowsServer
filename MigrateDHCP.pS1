@@ -1,3 +1,4 @@
+$nbetendue=102
 $Etendues=Get-DhcpServerv4Scope -ComputerName "Srv.mydom.dom"
 
 Foreach ($Etendue in $Etendues) 
@@ -10,7 +11,7 @@ Export-DhcpServer -ComputerName Srv.mydom.dom -ScopeId $Value.IPAddressToString 
 
 $nbfichier = (Get-ChildItem "C:\DHCP").Count
 
-if ($nbfichier -eq $Etendues)
+if ($nbfichier -eq $nbetendue)
 {
 
     Write-host "Exportation ok"

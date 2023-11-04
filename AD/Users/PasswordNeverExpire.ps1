@@ -1,0 +1,1 @@
+Get-ADUser -filter * -Properties PasswordNeverExpires | select name,Pass wordNeverExpires | Where-Object {$_.PasswordNeverExpires -like "True"}

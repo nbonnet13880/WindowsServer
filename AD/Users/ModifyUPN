@@ -1,0 +1,11 @@
+import-module ActiveDirectory
+$users=Get-ADUser -Filter * -Searchbase "OU=testnbon,OU=INFORMATIQUE,OU=Site Principal,OU=CH,DC=formation,DC=local"
+foreach ($util in $users)
+{
+ $NewUPN = "gh-training.fr"
+ $Prefixe = $util.UserPrincipalName.Split("@")[0]
+ 
+ $UPN = "$($Prefixe)@" + $NewUPN
+
+ $util | Set-ADUser  -Server "sn08" -UserPrincipalName $UPN 
+}

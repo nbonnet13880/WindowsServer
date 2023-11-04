@@ -1,0 +1,2 @@
+Import-Module ActiveDirectory
+Get-ADComputer -Filter * -Properties * | Select-Object -Property Name,LastLogon,whenCreated,Enabled | Sort-Object -Property Name | Export-Csv -path C:\Users\nbonnet\Desktop\file1.csv

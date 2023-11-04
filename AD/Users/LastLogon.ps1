@@ -1,0 +1,2 @@
+Import-Module ActiveDirectory
+Get-ADUser -Filter * -Properties * | Select-Object -Property Name,SamAccountName,Description,LastLogonDate,whenCreated,Enabled,Organization | Sort-Object -Property Name | Export-Csv -path C:\Users\nbonnet\Desktop\file1.csv

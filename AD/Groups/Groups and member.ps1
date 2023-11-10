@@ -1,4 +1,18 @@
-## Open Active Directory Module
+<#
+.SYNOPSIS 
+This script permit to list the AD groups and all members.
+
+.DESCRIPTION 
+The powershell variable permit to configure the path and the name of the CSV file. After that the name of the group and all member are listed and imported into the 
+variable $Groups. The value is converted into string to permit export in the CSV file.
+
+.LINK 
+https://www.inyourcloud.fr
+https://www.nibonnet.fr
+
+#>
+
+## Import Active Directory Module
 import-module activeDirectory
 
 ## Path and name of OutFile

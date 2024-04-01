@@ -5,7 +5,7 @@
     The script begin by an inventory of folder and subfolders (only level 2) and for each directory inventoried, the CmdLets Get-ACl is executed. The result is added on the csv file.
 .EXAMPLE
     For inventory the folders and subfolders in the drive N, modify the line 15 ($PathFolders = Get-ChildItem  -Path "N:\"). 
-    If we begin the inventory from the folder Script, you need modify the line like this ($PathFolders = Get-ChildItem  -Path "N:\")
+    If we begin the inventory from the folder Script, you need modify the line like this ($PathFolders = Get-ChildItem  -Path "N:\").
 .NOTES
     Script created by Nicolas BONNET 21-02-2024.
 #>
